@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scraping Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Welcome to Mars</h1>
+      <p>The (very cold) Red Planet</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get the Latest Data!</a></p>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><a href = {{  vacation. news_link  }}>{{  vacation.news_title  }}</a></h1>
+        <p>{{  vacation.news_date  }}</p>
+        <p>{{  vacation.news_p  }}</p>
+      </div>
+    </div >
+        
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>The moment's featured image</h2>
+        <img class="image-fluid" src="{{ vacation.featured_image_url }}" alt="Featured Image">
+      </div>
+      <div class="col-sm-4">
+        <h3>The most recent weather report:</h2>
+        <p>{{ vacation.mars_weather }}</p>
+        <br>
+        <h3>Fun Facts about Mars</h3>
+        <table class="table table-striped">{{  vacation.mars_facts_table  | safe}}</table>
+       
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col=sm-12">
+        <a src = "{{  vacation.hemispheres_list  }}"></src>
+      </div>
+    </div>
+</body> -->
+
+</html>
